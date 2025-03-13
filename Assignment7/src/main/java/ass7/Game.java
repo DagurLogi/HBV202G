@@ -21,11 +21,10 @@ public class Game {
     public Game() {
         scanner = new Scanner(System.in);
     }
-
     public void play() {
         int userScore = 0;
         int computerScore = 0;
-
+        
         while (true) {
             String userChoice = getUserChoice();
             if (userChoice.equals("quit")) {
@@ -51,8 +50,19 @@ public class Game {
 
     private String getUserChoice() {
         System.out.print("Enter your choice (rock, paper, scissors, or quit): ");
-        return scanner.nextLine().toLowerCase();
-                    }
+        String userChoice = scanner.nextLine().toLowerCase();  
+    
+    
+        while (!userChoice.equals("rock") && !userChoice.equals("paper") &&
+               !userChoice.equals("scissors") && !userChoice.equals("quit")) {
+            System.out.println("Invalid input. Please enter rock, paper, scissors, or quit.");
+            System.out.print("Enter your choice (rock, paper, scissors, or quit): ");
+            userChoice = scanner.nextLine().toLowerCase();
+        }
+    
+        return userChoice; 
+    }
+    
 
     private String getComputerChoice() {
         String[] choices = {"rock", "paper", "scissors"};

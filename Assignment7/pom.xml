@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ass7</groupId>
-  <artifactId>dlo4</artifactId>
+  <artifactId>Assignment7</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>dlo4</name>
+  <name>Assignment7</name>
   <url>http://www.example.com</url>
 
   <properties>
